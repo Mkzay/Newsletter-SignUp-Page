@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>News Letter SignUp Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <section class="left">
+        <div><img src="images/illustration-sign-up-mobile.svg" alt="illustration-sign-up-mobile"></div>
+        <!--<div><img src="images/illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop"></div>-->
+    </section>
+    <section class="right">
+        <aside class="first">
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul>
+                <li>Product discovery and building what matters</li>
+                <li>Measuring to ensure updates are a success</li>
+                <li>And much more!</li>
+            </ul>
+        </aside>
+        <aside class="second">
+            <form id="form" action="#" method="get">
+                <div class="one">
+                    <label for="mail">Email address</label>
+                    <div id="error"></div>
+                    <input type="text" id="mail" placeholder="email@company.com">
+                </div>
+                <div class="two">
+                    <input type="submit" id="submit" value="Subscribe to monthly newsletter">
+                </div>
+            </form>
+        </aside>
+    </section>
+    <script src="app.js"></script>
 </body>
 </html>
