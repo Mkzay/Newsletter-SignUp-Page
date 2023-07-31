@@ -11,13 +11,24 @@
         <div>
             <img src="images/icon-success.svg" alt="icon-success">
             <h1>Thanks for subscribing!</h1>
-            <p>A confirmation email has been sent to <span>ash@loremcompany.com</span>. 
+            <p>A confirmation email has been sent to <span id="userEmail"></span>. 
             Please open it and click the button inside to confirm your subscription.</p>
         </div>
         <div class="two">
             <input type="submit" id="dismiss" value="Dismiss message">
         </div>
     </main>
-    <script src="app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const email = params.get('email');
+            const userEmailSpan = document.getElementById('userEmail');
+            userEmailSpan.textContent = email;
+        });
+
+        dismiss.addEventListener('click', function () {
+            location.href = 'index.html'
+        });
+    </script>
 </body>
 </html>
