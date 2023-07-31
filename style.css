@@ -23,8 +23,12 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.left img {
+.left .image-1 img {
     width: 100%;
+}
+
+.left .image-2 img {
+    width: 0;
 }
 
 .right {
@@ -46,15 +50,29 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
     margin-left: -21px;
-    padding: 10px 7px;
+    padding: 10px 8px;
     color: var(--Dark-Grey);
 }
 
-.right ul li{
+.right ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-left: -14px;
+}
+
+.right ul li {
     font-size: 0.9rem;
     font-weight: 400;
-    padding: 10px 19px;
+    padding: 9px 19px 10px 34px;
     color: var(--Dark-Grey);
+    
+
+
+
+    background-image: url(images/icon-success.svg);
+    background-repeat: no-repeat;
+    background-size: 20px 40px;
 }
 
 .right .second form {
@@ -83,12 +101,12 @@ body {
     font-size: 0.71rem;
     font-weight: 400;
     color: var(--Tomato);
-    width: 40%;
-    position: absolute;
+    width: 50%;
     transform: translateY(-4%) translateX(117%);
     padding: 12px;
     text-align: center;
     display: none;
+    overflow: hidden;
   }
 
 .right .second .one input[type=text] {
@@ -113,4 +131,41 @@ body {
 
 .right .second .two input[type=submit]:hover {
     background-color: var(--Tomato);
+}
+
+
+@media screen and (min-width: 900px) {
+    body {
+        height: 100vh;
+        flex-direction: row-reverse;
+        gap: 20px;
+    }
+
+    .left .image-1 img {
+        width: 0;
+    }
+    
+    .left .image-2 img {
+        width: 100%;
+    }
+
+    .right .first h1 {
+        font-size: 3rem;
+    }
+    
+    .right .first p {
+        width: 90%;
+    }
+
+    .right .second .one #error {
+        font-size: 0.71rem;
+        font-weight: 400;
+        color: var(--Tomato);
+        width: 20%;
+        position: absolute;
+        transform: translateY(-4%) translateX(59%);
+        padding: 12px;
+        text-align: center;
+        display: none;
+      }
 }

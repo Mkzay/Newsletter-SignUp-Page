@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#form');
     const errorElement = document.querySelector('#error');
     const submit = document.querySelector('#submit');
+    const dismiss = document.getElementById('dismiss');
   
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   
@@ -27,7 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
         errorElement.style.display = 'block';
       } else {
 
-        alert('Form submitted successfully!');
+        location.href = 'success.html';
+
+        //alert('Form submitted successfully!');
 
         form.submit();
       }
@@ -38,4 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
       errorElement.textContent = '';
     });
   });
-  
+
+dismiss.addEventListener('click', function(){
+  location.href = 'index.html';
+});
